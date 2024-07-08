@@ -1,0 +1,35 @@
+@import 'assets/fonts.css';
+@import 'assets/variables.css';
+@import 'assets/header.css';
+@import 'assets/about.css';
+@import 'assets/contact.css';
+
+html {
+    background: var(--white); 
+    height: 100%;
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+  
+body {
+    margin: 0;
+
+    width: 100%;
+    min-height: 200vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    
+    color: var(--black);
+    font-family: "Rethink Sans", sans-serif;
+    font-size: var(--body);
+
+    overflow-x: hidden;
+}
+  
+* {
+    box-sizing: border-box;
+}

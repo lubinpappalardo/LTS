@@ -1,0 +1,201 @@
+@import 'fonts.css';
+@import 'variables.css';
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    @media only screen and (max-width: 767px) {
+        height: 75vh;   
+    }
+}
+
+/*
+    Moving banner
+*/
+
+#moving-banner {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    background-color: var(--color1);
+    display: flex;
+    align-items: center;
+
+    .wrap {
+        display: flex;
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 0 20px;
+        gap: 40px;
+        animation-name: slideLeft;
+        animation-duration: var(--bannerScrollDuration);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    p {
+        position: relative;
+        white-space: nowrap;
+        color: var(--white);
+        font-family: 'Braga Huis Regular', sans-serif;
+        font-size: 1.5rem;
+    }
+
+    .wrap p:not(:last-child)::after {
+        --diameter: 5px;
+        content: "";
+        position: absolute;
+        left: calc(100% + 20px - (var(--diameter) / 2));
+        top: 50%;
+        transform: translateY(-50%);
+        width: var(--diameter);
+        height: var(--diameter);
+        border-radius: 50%;
+        background-color: var(--white);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/*
+    Title
+*/
+
+#title-group {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: var(--white);
+    text-align: center;
+    animation: floatUpFadeOut linear;
+    animation-timeline: scroll();
+
+    #LTS {
+        font-family: 'Braga Huis Regular', sans-serif;
+        font-size: 12rem;
+        margin: 0;
+    }
+
+    #LTS-desc {
+        font-family: 'Northwell', cursive;
+        font-size: 2rem;
+        margin: 0;
+    }
+}
+
+@keyframes floatUpFadeOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -150%);
+    }
+
+}
+
+/*
+    Background image container 
+*/
+
+#background-image-container {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 5%;
+    }
+
+    img.fade-in {
+        animation: fadeIn 1s;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*
+    Scroll down
+*/
+
+#scroll-down {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 35px;
+    height: 50px;
+    border: 2px solid var(--white);
+    border-radius: 50px;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+    img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        transform: translateY(2px);
+        animation: scrollDown 4s ease-in-out infinite;
+    }
+
+    &:not(.visible) {
+        opacity: 0;
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: translateY(2px);
+        opacity: 1;
+    }
+    10% {
+        transform: translateY(-2px);
+        opacity: 0.8;
+    }
+    24.9% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    25% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    30%, 50%, 70%, 90% {
+        transform: translateY(2px);
+        opacity: 1;
+    }
+    40%, 60%, 80% {
+        transform: translateY(-2px);
+        opacity: 1;
+    }
+}

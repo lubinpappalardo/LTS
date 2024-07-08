@@ -1,0 +1,20 @@
+:root {
+    --white: #fff;
+    --color1: #354E8C;
+    --color2: #697E9A;
+    --black: #404040;
+
+    --h1size: 6rem;
+    --body: 16px;
+    --small: 12px;
+    --extrasmall: 10px;
+
+    @media only screen and (max-width: 767px) {
+        --h1size: 4rem;
+        --body: 14px;
+        --small: 10px;
+        --extrasmall: 8px;
+    }
+
+    --bannerScrollDuration: 30s;
+}

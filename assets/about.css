@@ -1,0 +1,47 @@
+
+#about {
+    position: relative;
+    /* border: 1px solid red; */
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 40px;
+    gap: 20px;
+}
+
+#about div {
+    max-width: 800px;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20%);
+    animation: textFloatUpFadeIn linear forwards;
+    animation-timeline: view(y);
+    animation-range: entry;
+    /* border: 1px solid red; */
+
+    h1 {
+        font-family: 'Northwell', cursive;
+        font-size: var(--h1size);
+        font-weight: normal;
+        margin: .5rem;
+        margin-bottom: -.5rem;
+        color: var(--color2);
+    }
+
+    &.subsection2 {
+        align-self: flex-end;
+
+        h1 {
+            text-align: right;
+        }
+        
+    }
+}
+
+@keyframes textFloatUpFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

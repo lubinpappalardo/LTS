@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'RethinkSans';
+    src: url('fonts/RethinkSans-VariableFont_wght.ttf');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Braga Huis Regular';
+    src: url('fonts/Braga Huis Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Northwell';
+    src: url('fonts/Northwell.ttf');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
