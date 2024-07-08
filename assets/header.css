@@ -83,6 +83,7 @@
     text-align: center;
     animation: floatUpFadeOut linear;
     animation-timeline: scroll();
+    /* border: 1px solid red; */
 
     #LTS {
         font-family: 'Braga Huis Regular', sans-serif;
@@ -94,6 +95,10 @@
         font-family: 'Northwell', cursive;
         font-size: 2rem;
         margin: 0;
+
+        @media only screen and (max-width: 767px) {
+            font-size: 1.5rem;
+        }
     }
 }
 
