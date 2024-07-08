@@ -8,6 +8,10 @@
     flex-direction: column;
     padding: 60px 40px;
     gap: 20px;
+
+    @media only screen and (max-width: 767px) {
+        padding: 60px 20px;
+    }
 }
 
 #about div {

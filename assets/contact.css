@@ -48,8 +48,10 @@
             width: 100%;
         }
 
-        &:nth-child(2) {
-            animation-range: entry 100px;
+        @media only screen and (min-width: 768px) {
+            &:nth-child(2) {
+                animation-range: entry 100px;
+            }
         }
 
         .image-container {
@@ -93,8 +95,15 @@
                 color: var(--white);
                 text-decoration: none;
 
-                &:hover {
-                    text-decoration: underline;
+                @media only screen and (min-width: 768px) {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                @media only screen and (max-width: 767px) {
+                    &:active {
+                        text-decoration: underline;
+                    }
                 }
             }
 
