@@ -52,6 +52,11 @@
         margin: 0;
         margin-left: .5rem;
         text-align: center;
+        line-height: 1;
+
+        @media only screen and (max-width: 767px) {
+            transform: translateY(5%);
+        }
     }
 
     #LTS-desc {
