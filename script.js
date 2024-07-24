@@ -2,7 +2,7 @@ let newImage;
 let imageIndex = 1;
 const imageContainer = $("#background-image-container");
 let image = imageContainer.children("img");
-const totalImages = 10;
+const totalImages = 9;
 const preloadedImages = [];
 
 // Preload all images

@@ -9,12 +9,12 @@
     --small: 12px;
     --extrasmall: 10px;
 
+    --bannerScrollDuration: 40s;
+
     @media only screen and (max-width: 767px) {
         --h1size: 4rem;
         --body: 14px;
         --small: 10px;
         --extrasmall: 8px;
     }
-
-    --bannerScrollDuration: 30s;
 }
