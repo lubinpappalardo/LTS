@@ -1,5 +1,6 @@
 #contact {
     position: relative;
+    /* overflow-x: hidden; */
     width: 100%;
     background-color: var(--color1);
     display: flex;
