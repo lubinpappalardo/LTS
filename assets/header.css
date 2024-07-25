@@ -25,10 +25,10 @@
     text-align: center;
     animation: floatUpFadeOut linear;
     animation-timeline: scroll();
-    padding: 10px 30px;
+    /* padding: 10px 30px;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    /* border: 1px solid red; */
+    border: 1px solid red;
 
     @media only screen and (max-width: 767px) {
         padding: 10px 40px;
@@ -44,7 +44,7 @@
         background: var(--color1);
         opacity: 0.8;
         z-index: -1;
-    }
+    } */
 
     #LTS {
         font-family: 'Braga Huis Regular', sans-serif;
